@@ -1,1662 +1,2129 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luxury Real Estate</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    animation: {
-                        'fade-in': 'fadeIn 1s ease-out',
-                        'slide-up': 'slideUp 0.5s ease-out',
-                        'slide-down': 'slideDown 0.5s ease-out',
-                        'slide-left': 'slideLeft 0.5s ease-out',
-                        'slide-right': 'slideRight 0.5s ease-out',
-                        'bounce-slow': 'bounce 3s infinite',
-                        'pulse-slow': 'pulse 3s infinite',
-                        'float': 'float 3s ease-in-out infinite',
-                        'scale': 'scale 0.5s ease-out',
-                        'rotate-slow': 'rotate 15s linear infinite',
-                        'shimmer': 'shimmer 2.2s linear infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(100px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        },
-                        slideDown: {
-                            '0%': { transform: 'translateY(-100px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        },
-                        slideLeft: {
-                            '0%': { transform: 'translateX(100px)', opacity: '0' },
-                            '100%': { transform: 'translateX(0)', opacity: '1' },
-                        },
-                        slideRight: {
-                            '0%': { transform: 'translateX(-100px)', opacity: '0' },
-                            '100%': { transform: 'translateX(0)', opacity: '1' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        scale: {
-                            '0%': { transform: 'scale(0.8)', opacity: '0' },
-                            '100%': { transform: 'scale(1)', opacity: '1' },
-                        },
-                        shimmer: {
-                            '0%': { backgroundPosition: '-1000px 0' },
-                            '100%': { backgroundPosition: '1000px 0' },
-                        },
-                    },
-                },
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              "fade-in": "fadeIn 1s ease-out",
+              "slide-up": "slideUp 0.5s ease-out",
+              "slide-down": "slideDown 0.5s ease-out",
+              "slide-left": "slideLeft 0.5s ease-out",
+              "slide-right": "slideRight 0.5s ease-out",
+              "bounce-slow": "bounce 3s infinite",
+              "pulse-slow": "pulse 3s infinite",
+              float: "float 3s ease-in-out infinite",
+              scale: "scale 0.5s ease-out",
+              "rotate-slow": "rotate 15s linear infinite",
+              shimmer: "shimmer 2.2s linear infinite",
             },
-        }
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(100px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              slideDown: {
+                "0%": { transform: "translateY(-100px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              slideLeft: {
+                "0%": { transform: "translateX(100px)", opacity: "0" },
+                "100%": { transform: "translateX(0)", opacity: "1" },
+              },
+              slideRight: {
+                "0%": { transform: "translateX(-100px)", opacity: "0" },
+                "100%": { transform: "translateX(0)", opacity: "1" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+              scale: {
+                "0%": { transform: "scale(0.8)", opacity: "0" },
+                "100%": { transform: "scale(1)", opacity: "1" },
+              },
+              shimmer: {
+                "0%": { backgroundPosition: "-1000px 0" },
+                "100%": { backgroundPosition: "1000px 0" },
+              },
+            },
+          },
+        },
+      };
     </script>
 
     <style>
-        .scroll-smooth {
-            scroll-behavior: smooth;
-        }
+      .scroll-smooth {
+        scroll-behavior: smooth;
+      }
 
-        [data-aos] {
-            opacity: 0;
-            transition-property: all;
-        }
+      [data-aos] {
+        opacity: 0;
+        transition-property: all;
+      }
 
-        [data-aos].aos-animate {
-            opacity: 1;
-        }
+      [data-aos].aos-animate {
+        opacity: 1;
+      }
 
-        .gradient-text {
-            background: linear-gradient(to right, #6366f1, #a855f7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+      .gradient-text {
+        background: linear-gradient(to right, #6366f1, #a855f7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     </style>
-</head>
-<body class="scroll-smooth">
-
+  </head>
+  <body class="scroll-smooth">
     <!-- Header -->
-<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="header">
-    <nav class="relative bg-white/5 backdrop-blur-xl border-b border-white/10">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      id="header"
+    >
+      <nav
+        class="relative bg-white/5 backdrop-blur-xl border-b border-white/10"
+      >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Логотип -->
-                <div class="flex-shrink-0">
-                    <a href="#" class="flex items-center space-x-3">
-                        <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 
-                                    rounded-xl flex items-center justify-center">
-                            <span class="text-white text-xl font-bold">L</span>
-                        </div>
-                        <span class="text-white text-xl font-bold">Luxury Estate</span>
-                    </a>
+          <div class="flex items-center justify-between h-20">
+            <!-- Логотип -->
+            <div class="flex-shrink-0">
+              <a href="#" class="flex items-center space-x-3">
+                <div
+                  class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center"
+                >
+                  <span class="text-white text-xl font-bold">L</span>
                 </div>
-
-                <!-- Основное меню - Desktop -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="#home" 
-                       class="text-gray-300 hover:text-white transition-colors relative group py-2">
-                        Главная
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 transform scale-x-0 
-                                   group-hover:scale-x-100 transition-transform origin-left"></span>
-                    </a>
-                    <a href="#about" 
-                       class="text-gray-300 hover:text-white transition-colors relative group py-2">
-                        О нас
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 transform scale-x-0 
-                                   group-hover:scale-x-100 transition-transform origin-left"></span>
-                    </a>
-                    <a href="#services" 
-                       class="text-gray-300 hover:text-white transition-colors relative group py-2">
-                        Услуги
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 transform scale-x-0 
-                                   group-hover:scale-x-100 transition-transform origin-left"></span>
-                    </a>
-                    <a href="#properties" 
-                       class="text-gray-300 hover:text-white transition-colors relative group py-2">
-                        Объекты
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 transform scale-x-0 
-                                   group-hover:scale-x-100 transition-transform origin-left"></span>
-                    </a>
-                    <a href="#agents" 
-                       class="text-gray-300 hover:text-white transition-colors relative group py-2">
-                        Агенты
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 transform scale-x-0 
-                                   group-hover:scale-x-100 transition-transform origin-left"></span>
-                    </a>
-                    <a href="#contact" 
-                       class="text-gray-300 hover:text-white transition-colors relative group py-2">
-                        Контакты
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 transform scale-x-0 
-                                   group-hover:scale-x-100 transition-transform origin-left"></span>
-                    </a>
-                </div>
-
-                <!-- Правая часть - Desktop -->
-                <div class="hidden lg:flex items-center space-x-6">
-                    <!-- Телефон -->
-                    <a href="tel:+74951234567" 
-                       class="flex items-center text-gray-300 hover:text-white transition-colors">
-                        <i class="fas fa-phone-alt mr-2 text-indigo-400"></i>
-                        +7 (495) 123-45-67
-                    </a>
-
-                    <!-- Кнопка обратного звонка -->
-                    <button class="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r 
-                                 from-indigo-600 to-purple-600 text-white rounded-xl overflow-hidden 
-                                 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25">
-                        <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full 
-                                   group-hover:w-full group-hover:h-full opacity-10"></span>
-                        <span class="relative flex items-center">
-                            <i class="fas fa-headset mr-2"></i>
-                            Заказать звонок
-                        </span>
-                    </button>
-                </div>
-
-                <!-- Мобильное меню кнопка -->
-                <div class="lg:hidden">
-                    <button id="mobile-menu-button" 
-                            class="w-12 h-12 flex items-center justify-center text-white 
-                                   bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
+                <span class="text-white text-xl font-bold">Luxury Estate</span>
+              </a>
             </div>
+
+            <!-- Основное меню - Desktop -->
+            <div class="hidden lg:flex items-center space-x-8">
+              <a
+                href="#home"
+                class="text-gray-300 hover:text-white transition-colors relative group py-2"
+              >
+                Главная
+                <span
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
+                ></span>
+              </a>
+              <a
+                href="#about"
+                class="text-gray-300 hover:text-white transition-colors relative group py-2"
+              >
+                О нас
+                <span
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
+                ></span>
+              </a>
+              <a
+                href="#services"
+                class="text-gray-300 hover:text-white transition-colors relative group py-2"
+              >
+                Услуги
+                <span
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
+                ></span>
+              </a>
+              <a
+                href="#properties"
+                class="text-gray-300 hover:text-white transition-colors relative group py-2"
+              >
+                Объекты
+                <span
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
+                ></span>
+              </a>
+              <a
+                href="#agents"
+                class="text-gray-300 hover:text-white transition-colors relative group py-2"
+              >
+                Агенты
+                <span
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
+                ></span>
+              </a>
+              <a
+                href="#contact"
+                class="text-gray-300 hover:text-white transition-colors relative group py-2"
+              >
+                Контакты
+                <span
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
+                ></span>
+              </a>
+            </div>
+
+            <!-- Правая часть - Desktop -->
+            <div class="hidden lg:flex items-center space-x-6">
+              <!-- Телефон -->
+              <a
+                href="tel:+74951234567"
+                class="flex items-center text-gray-300 hover:text-white transition-colors"
+              >
+                <i class="fas fa-phone-alt mr-2 text-indigo-400"></i>
+                +7 (495) 123-45-67
+              </a>
+
+              <!-- Кнопка обратного звонка -->
+              <button
+                class="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25"
+              >
+                <span
+                  class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-full group-hover:h-full opacity-10"
+                ></span>
+                <span class="relative flex items-center">
+                  <i class="fas fa-headset mr-2"></i>
+                  Заказать звонок
+                </span>
+              </button>
+            </div>
+
+            <!-- Мобильное меню кнопка -->
+            <div class="lg:hidden">
+              <button
+                id="mobile-menu-button"
+                class="w-12 h-12 flex items-center justify-center text-white bg-white/5 rounded-xl hover:bg-white/10 transition-colors"
+              >
+                <i class="fas fa-bars text-xl"></i>
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- Мобильное меню -->
-        <div id="mobile-menu" 
-             class="lg:hidden hidden bg-gray-900/95 backdrop-blur-xl border-t border-white/10">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-4">
-                <a href="#home" class="block text-gray-300 hover:text-white transition-colors py-2">
-                    Главная
-                </a>
-                <a href="#about" class="block text-gray-300 hover:text-white transition-colors py-2">
-                    О нас
-                </a>
-                <a href="#services" class="block text-gray-300 hover:text-white transition-colors py-2">
-                    Услуги
-                </a>
-                <a href="#properties" class="block text-gray-300 hover:text-white transition-colors py-2">
-                    Объекты
-                </a>
-                <a href="#agents" class="block text-gray-300 hover:text-white transition-colors py-2">
-                    Агенты
-                </a>
-                <a href="#contact" class="block text-gray-300 hover:text-white transition-colors py-2">
-                    Контакты
-                </a>
-                
-                <div class="pt-4 border-t border-white/10">
-                    <a href="tel:+74951234567" 
-                       class="flex items-center text-gray-300 hover:text-white transition-colors py-2">
-                        <i class="fas fa-phone-alt mr-2 text-indigo-400"></i>
-                        +7 (495) 123-45-67
-                    </a>
-                    <button class="w-full mt-4 group relative inline-flex items-center justify-center 
-                                 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white 
-                                 rounded-xl overflow-hidden transition-all duration-300">
-                        <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white 
-                                   rounded-full group-hover:w-full group-hover:h-full opacity-10"></span>
-                        <span class="relative flex items-center">
-                            <i class="fas fa-headset mr-2"></i>
-                            Заказать звонок
-                        </span>
-                    </button>
-                </div>
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden bg-gray-900/95 backdrop-blur-xl border-t border-white/10"
+        >
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-4">
+            <a
+              href="#home"
+              class="block text-gray-300 hover:text-white transition-colors py-2"
+            >
+              Главная
+            </a>
+            <a
+              href="#about"
+              class="block text-gray-300 hover:text-white transition-colors py-2"
+            >
+              О нас
+            </a>
+            <a
+              href="#services"
+              class="block text-gray-300 hover:text-white transition-colors py-2"
+            >
+              Услуги
+            </a>
+            <a
+              href="#properties"
+              class="block text-gray-300 hover:text-white transition-colors py-2"
+            >
+              Объекты
+            </a>
+            <a
+              href="#agents"
+              class="block text-gray-300 hover:text-white transition-colors py-2"
+            >
+              Агенты
+            </a>
+            <a
+              href="#contact"
+              class="block text-gray-300 hover:text-white transition-colors py-2"
+            >
+              Контакты
+            </a>
+
+            <div class="pt-4 border-t border-white/10">
+              <a
+                href="tel:+74951234567"
+                class="flex items-center text-gray-300 hover:text-white transition-colors py-2"
+              >
+                <i class="fas fa-phone-alt mr-2 text-indigo-400"></i>
+                +7 (495) 123-45-67
+              </a>
+              <button
+                class="w-full mt-4 group relative inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl overflow-hidden transition-all duration-300"
+              >
+                <span
+                  class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-full group-hover:h-full opacity-10"
+                ></span>
+                <span class="relative flex items-center">
+                  <i class="fas fa-headset mr-2"></i>
+                  Заказать звонок
+                </span>
+              </button>
             </div>
+          </div>
         </div>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<!-- JavaScript для header -->
-<script>
-// Изменение стиля header при скролле
-window.addEventListener('scroll', () => {
-    const header = document.getElementById('header');
-    if (window.scrollY > 50) {
-        header.classList.add('bg-gray-900/95');
-    } else {
-        header.classList.remove('bg-gray-900/95');
-    }
-});
-
-// Мобильное меню
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
-let isMenuOpen = false;
-
-mobileMenuButton.addEventListener('click', () => {
-    isMenuOpen = !isMenuOpen;
-    if (isMenuOpen) {
-        mobileMenu.classList.remove('hidden');
-        mobileMenuButton.innerHTML = '<i class="fas fa-times text-xl"></i>';
-    } else {
-        mobileMenu.classList.add('hidden');
-        mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
-    }
-});
-
-// Закрытие мобильного меню при клике на ссылку
-document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
-        isMenuOpen = false;
-    });
-});
-
-// Плавный скролл к секциям
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+    <!-- JavaScript для header -->
+    <script>
+      // Изменение стиля header при скролле
+      window.addEventListener("scroll", () => {
+        const header = document.getElementById("header");
+        if (window.scrollY > 50) {
+          header.classList.add("bg-gray-900/95");
+        } else {
+          header.classList.remove("bg-gray-900/95");
         }
-    });
-});
-</script>
-  
+      });
 
+      // Мобильное меню
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      let isMenuOpen = false;
 
-       <!-- Hero Section -->
-<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <!-- Фоновый видео/изображение с параллакс эффектом -->
-    <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70 z-20"></div>
+      mobileMenuButton.addEventListener("click", () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+          mobileMenu.classList.remove("hidden");
+          mobileMenuButton.innerHTML = '<i class="fas fa-times text-xl"></i>';
+        } else {
+          mobileMenu.classList.add("hidden");
+          mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+        }
+      });
+
+      // Закрытие мобильного меню при клике на ссылку
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+          isMenuOpen = false;
+        });
+      });
+
+      // Плавный скролл к секциям
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      <!-- Фоновый видео/изображение с параллакс эффектом -->
+      <div class="absolute inset-0 z-0">
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70 z-20"
+        ></div>
         <div class="relative h-full w-full">
-            <!-- Можно заменить на видео для более динамичного эффекта -->
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9" 
-                 class="h-full w-full object-cover object-center scale-110 animate-slow-zoom" 
-                 alt="Luxury Estate Background">
+          <!-- Можно заменить на видео для более динамичного эффекта -->
+          <img
+            src="https://uzbekistan.travel/storage/app/media/Rasmlar/Toshkent/shaxar/cropped-images/AdobeStock_596864804-0-0-0-0-1738671594.jpeg"
+            class="h-full w-full object-cover object-center scale-110 animate-slow-zoom"
+            alt="Luxury Estate Background"
+          />
         </div>
-    </div>
+      </div>
 
-    <!-- Контент Hero секции -->
-    <div class="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <!-- Контент Hero секции -->
+      <div class="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <!-- Левая колонка с текстом -->
-            <div class="text-white space-y-8" data-aos="fade-right">
-                <div class="flex items-center space-x-2 text-indigo-400">
-                    <span class="h-px w-8 bg-indigo-400"></span>
-                    <span class="text-sm uppercase tracking-wider">Luxury Real Estate</span>
-                </div>
-                
-                <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
-                    <span class="block transform transition-transform hover:translate-x-2 duration-300">
-                        Найдите Свой
-                    </span>
-                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 transform transition-transform hover:translate-x-2 duration-300 delay-100">
-                        Идеальный Дом
-                    </span>
-                </h1>
-
-                <p class="text-xl text-gray-300 max-w-lg">
-                    Эксклюзивная недвижимость для тех, кто ценит непревзойденное качество и роскошь в каждой детали
-                </p>
-
-                <div class="flex space-x-4">
-                    <a href="#properties" 
-                       class="group relative inline-flex items-center px-8 py-4 bg-indigo-600 overflow-hidden rounded-full">
-                        <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-80 group-hover:h-80 opacity-10"></span>
-                        <span class="relative flex items-center">
-                            Смотреть объекты
-                            <svg class="ml-2 w-6 h-6 transform group-hover:translate-x-1 transition-transform" 
-                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                      d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </span>
-                    </a>
-                    
-                    <a href="#contact" 
-                       class="group relative inline-flex items-center px-8 py-4 border-2 border-white text-white overflow-hidden rounded-full hover:bg-white hover:text-gray-900 transition-colors duration-300">
-                        <span class="relative">Связаться с нами</span>
-                    </a>
-                </div>
+          <!-- Левая колонка с текстом -->
+          <div class="text-white space-y-8" data-aos="fade-right">
+            <div class="flex items-center space-x-2 text-indigo-400">
+              <span class="h-px w-8 bg-indigo-400"></span>
+              <span class="text-sm uppercase tracking-wider"
+                >Luxury Real Estate</span
+              >
             </div>
 
-            <!-- Правая колонка с поиском -->
-            <div class="backdrop-blur-md bg-white/10 rounded-3xl p-8 shadow-2xl" 
-                 data-aos="fade-left">
-                <div class="text-white mb-8">
-                    <h3 class="text-2xl font-bold mb-2">Найти недвижимость</h3>
-                    <p class="text-gray-300">Используйте фильтры для поиска идеального варианта</p>
+            <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+              <span
+                class="block transform transition-transform hover:translate-x-2 duration-300"
+              >
+                Найдите Свой
+              </span>
+              <span
+                class="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 transform transition-transform hover:translate-x-2 duration-300 delay-100"
+              >
+                Идеальный Дом
+              </span>
+            </h1>
+
+            <p class="text-xl text-gray-300 max-w-lg">
+              Эксклюзивная недвижимость для тех, кто ценит непревзойденное
+              качество и роскошь в каждой детали
+            </p>
+
+            <div class="flex space-x-4">
+              <a
+                href="#properties"
+                class="group relative inline-flex items-center px-8 py-4 bg-indigo-600 overflow-hidden rounded-full"
+              >
+                <span
+                  class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-80 group-hover:h-80 opacity-10"
+                ></span>
+                <span class="relative flex items-center">
+                  Смотреть объекты
+                  <svg
+                    class="ml-2 w-6 h-6 transform group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </span>
+              </a>
+
+              <a
+                href="#contact"
+                class="group relative inline-flex items-center px-8 py-4 border-2 border-white text-white overflow-hidden rounded-full hover:bg-white hover:text-gray-900 transition-colors duration-300"
+              >
+                <span class="relative">Связаться с нами</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Правая колонка с поиском -->
+          <div
+            class="backdrop-blur-md bg-white/10 rounded-3xl p-8 shadow-2xl"
+            data-aos="fade-left"
+          >
+            <div class="text-white mb-8">
+              <h3 class="text-2xl font-bold mb-2">Найти недвижимость</h3>
+              <p class="text-gray-300">
+                Используйте фильтры для поиска идеального варианта
+              </p>
+            </div>
+
+            <form class="space-y-6">
+              <div class="relative group">
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                >
+                  <i
+                    class="fas fa-search text-gray-400 group-hover:text-indigo-400 transition-colors duration-300"
+                  ></i>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Введите адрес или район"
+                  class="block w-full pl-10 pr-3 py-4 rounded-xl bg-white/20 border border-white/30 placeholder-gray-300 text-white backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 hover:bg-white/30 transition-all duration-300"
+                />
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="relative">
+                  <select
+                    class="block w-full px-4 py-4 rounded-xl bg-white/20 border border-white/30 text-white backdrop-blur-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500 hover:bg-white/30 transition-all duration-300"
+                  >
+                    <option value="" disabled selected>Тип недвижимости</option>
+                    <option value="apartment">Квартиры</option>
+                    <option value="house">Дома</option>
+                    <option value="villa">Виллы</option>
+                    <option value="penthouse">Пентхаусы</option>
+                  </select>
+                  <div
+                    class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"
+                  >
+                    <i class="fas fa-chevron-down text-gray-400"></i>
+                  </div>
                 </div>
 
-                <form class="space-y-6">
-                    <div class="relative group">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <i class="fas fa-search text-gray-400 group-hover:text-indigo-400 transition-colors duration-300"></i>
-                        </div>
-                        <input type="text" 
-                               placeholder="Введите адрес или район" 
-                               class="block w-full pl-10 pr-3 py-4 rounded-xl bg-white/20 border border-white/30 
-                                      placeholder-gray-300 text-white backdrop-blur-sm
-                                      focus:outline-none focus:ring-2 focus:ring-indigo-500 
-                                      hover:bg-white/30 transition-all duration-300">
-                    </div>
+                <div class="relative">
+                  <select
+                    class="block w-full px-4 py-4 rounded-xl bg-white/20 border border-white/30 text-white backdrop-blur-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500 hover:bg-white/30 transition-all duration-300"
+                  >
+                    <option value="" disabled selected>Бюджет</option>
+                    <option value="50">до 50 млн ₽</option>
+                    <option value="100">50-100 млн ₽</option>
+                    <option value="200">100-200 млн ₽</option>
+                    <option value="max">более 200 млн ₽</option>
+                  </select>
+                  <div
+                    class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"
+                  >
+                    <i class="fas fa-chevron-down text-gray-400"></i>
+                  </div>
+                </div>
+              </div>
 
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="relative">
-                            <select class="block w-full px-4 py-4 rounded-xl bg-white/20 border border-white/30 
-                                         text-white backdrop-blur-sm appearance-none cursor-pointer
-                                         focus:outline-none focus:ring-2 focus:ring-indigo-500 
-                                         hover:bg-white/30 transition-all duration-300">
-                                <option value="" disabled selected>Тип недвижимости</option>
-                                <option value="apartment">Квартиры</option>
-                                <option value="house">Дома</option>
-                                <option value="villa">Виллы</option>
-                                <option value="penthouse">Пентхаусы</option>
-                            </select>
-                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                                <i class="fas fa-chevron-down text-gray-400"></i>
-                            </div>
-                        </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="relative">
+                  <select
+                    class="block w-full px-4 py-4 rounded-xl bg-white/20 border border-white/30 text-white backdrop-blur-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500 hover:bg-white/30 transition-all duration-300"
+                  >
+                    <option value="" disabled selected>Спальни</option>
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                    <option value="4">4+</option>
+                    <option value="5">5+</option>
+                  </select>
+                  <div
+                    class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"
+                  >
+                    <i class="fas fa-chevron-down text-gray-400"></i>
+                  </div>
+                </div>
 
-                        <div class="relative">
-                            <select class="block w-full px-4 py-4 rounded-xl bg-white/20 border border-white/30 
-                                         text-white backdrop-blur-sm appearance-none cursor-pointer
-                                         focus:outline-none focus:ring-2 focus:ring-indigo-500 
-                                         hover:bg-white/30 transition-all duration-300">
-                                <option value="" disabled selected>Бюджет</option>
-                                <option value="50">до 50 млн ₽</option>
-                                <option value="100">50-100 млн ₽</option>
-                                <option value="200">100-200 млн ₽</option>
-                                <option value="max">более 200 млн ₽</option>
-                            </select>
-                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                                <i class="fas fa-chevron-down text-gray-400"></i>
-                            </div>
-                        </div>
-                    </div>
+                <div class="relative">
+                  <select
+                    class="block w-full px-4 py-4 rounded-xl bg-white/20 border border-white/30 text-white backdrop-blur-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500 hover:bg-white/30 transition-all duration-300"
+                  >
+                    <option value="" disabled selected>Площадь</option>
+                    <option value="100">до 100 м²</option>
+                    <option value="200">100-200 м²</option>
+                    <option value="300">200-300 м²</option>
+                    <option value="max">более 300 м²</option>
+                  </select>
+                  <div
+                    class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"
+                  >
+                    <i class="fas fa-chevron-down text-gray-400"></i>
+                  </div>
+                </div>
+              </div>
 
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="relative">
-                            <select class="block w-full px-4 py-4 rounded-xl bg-white/20 border border-white/30 
-                                         text-white backdrop-blur-sm appearance-none cursor-pointer
-                                         focus:outline-none focus:ring-2 focus:ring-indigo-500 
-                                         hover:bg-white/30 transition-all duration-300">
-                                <option value="" disabled selected>Спальни</option>
-                                <option value="1">1+</option>
-                                <option value="2">2+</option>
-                                <option value="3">3+</option>
-                                <option value="4">4+</option>
-                                <option value="5">5+</option>
-                            </select>
-                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                                <i class="fas fa-chevron-down text-gray-400"></i>
-                            </div>
-                        </div>
-
-                        <div class="relative">
-                            <select class="block w-full px-4 py-4 rounded-xl bg-white/20 border border-white/30 
-                                         text-white backdrop-blur-sm appearance-none cursor-pointer
-                                         focus:outline-none focus:ring-2 focus:ring-indigo-500 
-                                         hover:bg-white/30 transition-all duration-300">
-                                <option value="" disabled selected>Площадь</option>
-                                <option value="100">до 100 м²</option>
-                                <option value="200">100-200 м²</option>
-                                <option value="300">200-300 м²</option>
-                                <option value="max">более 300 м²</option>
-                            </select>
-                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                                <i class="fas fa-chevron-down text-gray-400"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button type="submit" 
-                            class="w-full relative inline-flex items-center justify-center px-8 py-4 
-                                   bg-gradient-to-r from-indigo-600 to-purple-600 
-                                   text-white rounded-xl overflow-hidden group">
-                        <span class="absolute w-0 h-0 transition-all duration-500 ease-out 
-                                   bg-white rounded-full group-hover:w-full group-hover:h-full 
-                                   opacity-10"></span>
-                        <span class="relative flex items-center">
-                            <i class="fas fa-search mr-2"></i>
-                            Найти
-                        </span>
-                    </button>
-                </form>
-            </div>
+              <button
+                type="submit"
+                class="w-full relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl overflow-hidden group"
+              >
+                <span
+                  class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-full group-hover:h-full opacity-10"
+                ></span>
+                <span class="relative flex items-center">
+                  <i class="fas fa-search mr-2"></i>
+                  Найти
+                </span>
+              </button>
+            </form>
+          </div>
         </div>
 
         <!-- Статистика -->
-        <div class="mt-16 grid grid-cols-3 gap-8 text-white text-center" data-aos="fade-up">
-            <div class="p-6 backdrop-blur-md bg-white/10 rounded-2xl transform hover:scale-105 transition-transform duration-300">
-                <div class="text-4xl font-bold mb-2">500+</div>
-                <div class="text-gray-300">Объектов в продаже</div>
-            </div>
-            <div class="p-6 backdrop-blur-md bg-white/10 rounded-2xl transform hover:scale-105 transition-transform duration-300">
-                <div class="text-4xl font-bold mb-2">1000+</div>
-                <div class="text-gray-300">Довольных клиентов</div>
-            </div>
-            <div class="p-6 backdrop-blur-md bg-white/10 rounded-2xl transform hover:scale-105 transition-transform duration-300">
-                <div class="text-4xl font-bold mb-2">15</div>
-                <div class="text-gray-300">Лет на рынке</div>
-            </div>
+        <div
+          class="mt-16 grid grid-cols-3 gap-8 text-white text-center"
+          data-aos="fade-up"
+        >
+          <div
+            class="p-6 backdrop-blur-md bg-white/10 rounded-2xl transform hover:scale-105 transition-transform duration-300"
+          >
+            <div class="text-4xl font-bold mb-2">500+</div>
+            <div class="text-gray-300">Объектов в продаже</div>
+          </div>
+          <div
+            class="p-6 backdrop-blur-md bg-white/10 rounded-2xl transform hover:scale-105 transition-transform duration-300"
+          >
+            <div class="text-4xl font-bold mb-2">1000+</div>
+            <div class="text-gray-300">Довольных клиентов</div>
+          </div>
+          <div
+            class="p-6 backdrop-blur-md bg-white/10 rounded-2xl transform hover:scale-105 transition-transform duration-300"
+          >
+            <div class="text-4xl font-bold mb-2">15</div>
+            <div class="text-gray-300">Лет на рынке</div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- Декоративные элементы -->
-    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
-    <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black/50 to-transparent z-10"></div>
-</section>
+      <!-- Декоративные элементы -->
+      <div
+        class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/50 to-transparent z-10"
+      ></div>
+      <div
+        class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black/50 to-transparent z-10"
+      ></div>
+    </section>
 
-<!-- Добавьте эту анимацию в ваши стили -->
-<style>
-@keyframes slow-zoom {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1); }
-}
+    <!-- Добавьте эту анимацию в ваши стили -->
+    <style>
+      @keyframes slow-zoom {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      }
 
-.animate-slow-zoom {
-    animation: slow-zoom 20s linear infinite alternate;
-}
-</style>
-    
-     <!-- About Section -->
-<section id="about" class="relative py-32 overflow-hidden bg-gradient-to-b from-gray-900 to-indigo-900">
-    <!-- Декоративные элементы -->
-    <div class="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-white to-transparent opacity-5"></div>
-    <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-[url('/path/to/pattern.png')] opacity-5"></div>
-        <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
-    </div>
+      .animate-slow-zoom {
+        animation: slow-zoom 20s linear infinite alternate;
+      }
+    </style>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- About Section -->
+    <section
+      id="about"
+      class="relative py-32 overflow-hidden bg-gradient-to-b from-gray-900 to-indigo-900"
+    >
+      <!-- Декоративные элементы -->
+      <div
+        class="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-white to-transparent opacity-5"
+      ></div>
+      <div class="absolute inset-0">
+        <div
+          class="absolute inset-0 bg-[url('/path/to/pattern.png')] opacity-5"
+        ></div>
+        <div
+          class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"
+        ></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Заголовок секции -->
         <div class="text-center mb-20" data-aos="fade-up">
-            <div class="inline-flex items-center space-x-2 mb-4">
-                <span class="h-px w-8 bg-indigo-500"></span>
-                <span class="text-indigo-400 uppercase text-sm tracking-wider font-medium">О нашей компании</span>
-                <span class="h-px w-8 bg-indigo-500"></span>
-            </div>
-            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Создаем пространство для
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-                    вашей жизни
-                </span>
-            </h2>
-            <p class="text-gray-300 text-lg max-w-2xl mx-auto">
-                15 лет безупречной работы в сфере элитной недвижимости. Мы не просто продаем дома – 
-                мы помогаем воплотить ваши мечты в реальность.
-            </p>
+          <div class="inline-flex items-center space-x-2 mb-4">
+            <span class="h-px w-8 bg-indigo-500"></span>
+            <span
+              class="text-indigo-400 uppercase text-sm tracking-wider font-medium"
+              >О нашей компании</span
+            >
+            <span class="h-px w-8 bg-indigo-500"></span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Создаем пространство для
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+            >
+              вашей жизни
+            </span>
+          </h2>
+          <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+            15 лет безупречной работы в сфере элитной недвижимости. Мы не просто
+            продаем дома – мы помогаем воплотить ваши мечты в реальность.
+          </p>
         </div>
 
         <!-- Основной контент -->
         <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <!-- Левая колонка с изображениями -->
-            <div class="relative" data-aos="fade-right">
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="space-y-4">
-                        <div class="rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9" 
-                                 class="w-full h-64 object-cover" 
-                                 alt="Luxury Home 1">
-                        </div>
-                        <div class="rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" 
-                                 class="w-full h-48 object-cover" 
-                                 alt="Luxury Home 2">
-                        </div>
-                    </div>
-                    <div class="space-y-4 pt-8">
-                        <div class="rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" 
-                                 class="w-full h-48 object-cover" 
-                                 alt="Luxury Home 3">
-                        </div>
-                        <div class="rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea" 
-                                 class="w-full h-64 object-cover" 
-                                 alt="Luxury Home 4">
-                        </div>
-                    </div>
+          <!-- Левая колонка с изображениями -->
+          <div class="relative" data-aos="fade-right">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-4">
+                <div
+                  class="rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500 shadow-2xl"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9"
+                    class="w-full h-64 object-cover"
+                    alt="Luxury Home 1"
+                  />
                 </div>
-                <!-- Декоративный элемент -->
-                <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full filter blur-3xl opacity-20"></div>
+                <div
+                  class="rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500 shadow-2xl"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                    class="w-full h-48 object-cover"
+                    alt="Luxury Home 2"
+                  />
+                </div>
+              </div>
+              <div class="space-y-4 pt-8">
+                <div
+                  class="rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500 shadow-2xl"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+                    class="w-full h-48 object-cover"
+                    alt="Luxury Home 3"
+                  />
+                </div>
+                <div
+                  class="rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500 shadow-2xl"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+                    class="w-full h-64 object-cover"
+                    alt="Luxury Home 4"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Декоративный элемент -->
+            <div
+              class="absolute -bottom-8 -right-8 w-64 h-64 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full filter blur-3xl opacity-20"
+            ></div>
+          </div>
+
+          <!-- Правая колонка с информацией -->
+          <div class="space-y-8" data-aos="fade-left">
+            <!-- Преимущества -->
+            <div class="grid gap-6">
+              <div
+                class="group bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+              >
+                <div class="flex items-center space-x-4">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                    >
+                      <i class="fas fa-award text-white text-xl"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-white mb-2">
+                      Экспертность
+                    </h3>
+                    <p class="text-gray-300">
+                      Более 1000 успешных сделок с элитной недвижимостью
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="group bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+              >
+                <div class="flex items-center space-x-4">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                    >
+                      <i class="fas fa-gem text-white text-xl"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-white mb-2">
+                      Премиум сервис
+                    </h3>
+                    <p class="text-gray-300">
+                      Индивидуальный подход к каждому клиенту
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="group bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+              >
+                <div class="flex items-center space-x-4">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                    >
+                      <i class="fas fa-shield-alt text-white text-xl"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-white mb-2">
+                      Надежность
+                    </h3>
+                    <p class="text-gray-300">
+                      Гарантия безопасности и прозрачности сделок
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- Правая колонка с информацией -->
-            <div class="space-y-8" data-aos="fade-left">
-                <!-- Преимущества -->
-                <div class="grid gap-6">
-                    <div class="group bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer">
-                        <div class="flex items-center space-x-4">
-                            <div class="flex-shrink-0">
-                                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fas fa-award text-white text-xl"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white mb-2">Экспертность</h3>
-                                <p class="text-gray-300">Более 1000 успешных сделок с элитной недвижимостью</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="group bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer">
-                        <div class="flex items-center space-x-4">
-                            <div class="flex-shrink-0">
-                                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fas fa-gem text-white text-xl"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white mb-2">Премиум сервис</h3>
-                                <p class="text-gray-300">Индивидуальный подход к каждому клиенту</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="group bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer">
-                        <div class="flex items-center space-x-4">
-                            <div class="flex-shrink-0">
-                                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fas fa-shield-alt text-white text-xl"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white mb-2">Надежность</h3>
-                                <p class="text-gray-300">Гарантия безопасности и прозрачности сделок</p>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Статистика -->
+            <div class="grid grid-cols-3 gap-6 mt-12">
+              <div class="text-center">
+                <div
+                  class="text-3xl font-bold text-white mb-2 group-hover:scale-110 transition-transform"
+                >
+                  <span class="counter" data-target="15">0</span>+
                 </div>
-
-                <!-- Статистика -->
-                <div class="grid grid-cols-3 gap-6 mt-12">
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">
-                            <span class="counter" data-target="15">0</span>+
-                        </div>
-                        <p class="text-gray-400 text-sm">Лет опыта</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">
-                            <span class="counter" data-target="1000">0</span>+
-                        </div>
-                        <p class="text-gray-400 text-sm">Сделок</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">
-                            <span class="counter" data-target="98">0</span>%
-                        </div>
-                        <p class="text-gray-400 text-sm">Довольных клиентов</p>
-                    </div>
+                <p class="text-gray-400 text-sm">Лет опыта</p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="text-3xl font-bold text-white mb-2 group-hover:scale-110 transition-transform"
+                >
+                  <span class="counter" data-target="1000">0</span>+
                 </div>
-
-                <!-- CTA -->
-                <div class="mt-12">
-                    <a href="#contact" 
-                       class="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full overflow-hidden">
-                        <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-80 group-hover:h-80 opacity-10"></span>
-                        <span class="relative flex items-center">
-                            Начать сотрудничество
-                            <svg class="ml-2 w-6 h-6 transform group-hover:translate-x-1 transition-transform" 
-                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                      d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </span>
-                    </a>
+                <p class="text-gray-400 text-sm">Сделок</p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="text-3xl font-bold text-white mb-2 group-hover:scale-110 transition-transform"
+                >
+                  <span class="counter" data-target="98">0</span>%
                 </div>
+                <p class="text-gray-400 text-sm">Довольных клиентов</p>
+              </div>
             </div>
+
+            <!-- CTA -->
+            <div class="mt-12">
+              <a
+                href="#contact"
+                class="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full overflow-hidden"
+              >
+                <span
+                  class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-80 group-hover:h-80 opacity-10"
+                ></span>
+                <span class="relative flex items-center">
+                  Начать сотрудничество
+                  <svg
+                    class="ml-2 w-6 h-6 transform group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Добавьте этот скрипт для анимации счетчиков -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const counters = document.querySelectorAll('.counter');
-    const speed = 200;
+    <!-- Добавьте этот скрипт для анимации счетчиков -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll(".counter");
+        const speed = 200;
 
-    const animateCounter = (counter) => {
-        const target = +counter.getAttribute('data-target');
-        let count = 0;
-        
-        const updateCount = () => {
+        const animateCounter = (counter) => {
+          const target = +counter.getAttribute("data-target");
+          let count = 0;
+
+          const updateCount = () => {
             const increment = target / speed;
             if (count < target) {
-                count = Math.ceil(count + increment);
-                counter.innerText = count;
-                setTimeout(updateCount, 1);
+              count = Math.ceil(count + increment);
+              counter.innerText = count;
+              setTimeout(updateCount, 1);
             } else {
-                counter.innerText = target;
+              counter.innerText = target;
             }
+          };
+
+          updateCount();
         };
 
-        updateCount();
-    };
-
-    const observerCallback = (entries) => {
-        entries.forEach(entry => {
+        const observerCallback = (entries) => {
+          entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                const counter = entry.target;
-                animateCounter(counter);
+              const counter = entry.target;
+              animateCounter(counter);
             }
+          });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, {
+          threshold: 0.5,
         });
-    };
 
-    const observer = new IntersectionObserver(observerCallback, {
-        threshold: 0.5
-    });
+        counters.forEach((counter) => observer.observe(counter));
+      });
+    </script>
+    <!-- Properties Section -->
+    <section id="properties" class="relative py-32 bg-gray-900">
+      <!-- Декоративные элементы -->
+      <div
+        class="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-5"
+      ></div>
+      <div
+        class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"
+      ></div>
 
-    counters.forEach(counter => observer.observe(counter));
-});
-</script>
- <!-- Properties Section -->
-<section id="properties" class="relative py-32 bg-gray-900">
-    <!-- Декоративные элементы -->
-    <div class="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-5"></div>
-    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
-    <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
-
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Заголовок секции -->
         <div class="text-center mb-20" data-aos="fade-up">
-            <div class="inline-flex items-center space-x-2 mb-4">
-                <span class="h-px w-8 bg-indigo-500"></span>
-                <span class="text-indigo-400 uppercase text-sm tracking-wider font-medium">Наши объекты</span>
-                <span class="h-px w-8 bg-indigo-500"></span>
-            </div>
-            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Эксклюзивная 
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-                    недвижимость
-                </span>
-            </h2>
-            <p class="text-gray-300 text-lg max-w-2xl mx-auto">
-                Откройте для себя коллекцию самых престижных объектов недвижимости
-            </p>
+          <div class="inline-flex items-center space-x-2 mb-4">
+            <span class="h-px w-8 bg-indigo-500"></span>
+            <span
+              class="text-indigo-400 uppercase text-sm tracking-wider font-medium"
+              >Наши объекты</span
+            >
+            <span class="h-px w-8 bg-indigo-500"></span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Эксклюзивная
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+            >
+              недвижимость
+            </span>
+          </h2>
+          <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+            Откройте для себя коллекцию самых престижных объектов недвижимости
+          </p>
         </div>
 
         <!-- Фильтры -->
-        <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
-            <button class="px-6 py-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 
-                         transition-all duration-300 transform hover:scale-105 active:scale-95">
-                Все объекты
-            </button>
-            <button class="px-6 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 
-                         transition-all duration-300 transform hover:scale-105 active:scale-95">
-                Квартиры
-            </button>
-            <button class="px-6 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 
-                         transition-all duration-300 transform hover:scale-105 active:scale-95">
-                Дома
-            </button>
-            <button class="px-6 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 
-                         transition-all duration-300 transform hover:scale-105 active:scale-95">
-                Виллы
-            </button>
-            <button class="px-6 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 
-                         transition-all duration-300 transform hover:scale-105 active:scale-95">
-                Пентхаусы
-            </button>
+        <div
+          class="flex flex-wrap justify-center gap-4 mb-12"
+          data-aos="fade-up"
+        >
+          <button
+            class="px-6 py-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 active:scale-95"
+          >
+            Все объекты
+          </button>
+          <button
+            class="px-6 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all duration-300 transform hover:scale-105 active:scale-95"
+          >
+            Квартиры
+          </button>
+          <button
+            class="px-6 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all duration-300 transform hover:scale-105 active:scale-95"
+          >
+            Дома
+          </button>
+          <button
+            class="px-6 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all duration-300 transform hover:scale-105 active:scale-95"
+          >
+            Виллы
+          </button>
+          <button
+            class="px-6 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all duration-300 transform hover:scale-105 active:scale-95"
+          >
+            Пентхаусы
+          </button>
         </div>
 
         <!-- Карточки объектов -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Карточка объекта 1 -->
-            <div class="group relative bg-white/5 backdrop-blur-xl rounded-3xl overflow-hidden 
-                        transition-all duration-500 hover:bg-white/10 hover:scale-[1.02]"
-                 data-aos="fade-up"
-                 data-aos-delay="100">
-                <!-- Изображение -->
-                <div class="relative h-80 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9" 
-                         class="w-full h-full object-cover transition-transform duration-500 
-                                group-hover:scale-110" 
-                         alt="Luxury Villa">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    
-                    <!-- Badges -->
-                    <div class="absolute top-4 left-4 flex gap-2">
-                        <span class="px-3 py-1 rounded-full text-sm bg-indigo-600 text-white">
-                            Продажа
-                        </span>
-                        <span class="px-3 py-1 rounded-full text-sm bg-purple-600 text-white">
-                            VIP
-                        </span>
-                    </div>
-                    
-                    <!-- Кнопка избранного -->
-                    <button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 
-                                 backdrop-blur-md flex items-center justify-center text-white 
-                                 transition-all duration-300 hover:bg-white hover:text-red-500 
-                                 group-hover:scale-110">
-                        <i class="far fa-heart"></i>
-                    </button>
-                    
-                    <!-- Цена -->
-                    <div class="absolute bottom-4 left-4">
-                        <div class="text-2xl font-bold text-white">₽120,000,000</div>
-                        <div class="text-sm text-gray-300">₽500,000/м²</div>
-                    </div>
-                </div>
+          <!-- Карточка объекта 1 -->
+          <div
+            class="group relative bg-white/5 backdrop-blur-xl rounded-3xl overflow-hidden transition-all duration-500 hover:bg-white/10 hover:scale-[1.02]"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <!-- Изображение -->
+            <div class="relative h-80 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                alt="Luxury Villa"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+              ></div>
 
-                <!-- Информация -->
-                <div class="p-6 space-y-4">
-                    <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 
-                               transition-colors duration-300">
-                        Современная Вилла на Рублёвке
-                    </h3>
-                    
-                    <div class="flex items-center text-gray-300">
-                        <i class="fas fa-map-marker-alt text-indigo-400 mr-2"></i>
-                        Рублёво-Успенское шоссе, 9 км
-                    </div>
+              <!-- Badges -->
+              <div class="absolute top-4 left-4 flex gap-2">
+                <span
+                  class="px-3 py-1 rounded-full text-sm bg-indigo-600 text-white"
+                >
+                  Продажа
+                </span>
+                <span
+                  class="px-3 py-1 rounded-full text-sm bg-purple-600 text-white"
+                >
+                  VIP
+                </span>
+              </div>
 
-                    <!-- Характеристики -->
-                    <div class="grid grid-cols-3 gap-4 py-4 border-t border-white/10">
-                        <div class="text-center">
-                            <div class="text-gray-300 mb-1">
-                                <i class="fas fa-bed text-indigo-400 mr-2"></i>5
-                            </div>
-                            <div class="text-xs text-gray-400">Спален</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-gray-300 mb-1">
-                                <i class="fas fa-bath text-indigo-400 mr-2"></i>4
-                            </div>
-                            <div class="text-xs text-gray-400">Ванных</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-gray-300 mb-1">
-                                <i class="fas fa-ruler-combined text-indigo-400 mr-2"></i>450
-                            </div>
-                            <div class="text-xs text-gray-400">м²</div>
-                        </div>
-                    </div>
+              <!-- Кнопка избранного -->
+              <button
+                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white transition-all duration-300 hover:bg-white hover:text-red-500 group-hover:scale-110"
+              >
+                <i class="far fa-heart"></i>
+              </button>
 
-                    <!-- Особенности -->
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 rounded-full text-xs bg-white/5 text-gray-300">
-                            Бассейн
-                        </span>
-                        <span class="px-3 py-1 rounded-full text-xs bg-white/5 text-gray-300">
-                            Спа
-                        </span>
-                        <span class="px-3 py-1 rounded-full text-xs bg-white/5 text-gray-300">
-                            Терраса
-                        </span>
-                        <span class="px-3 py-1 rounded-full text-xs bg-white/5 text-gray-300">
-                            Гараж
-                        </span>
-                    </div>
-
-                    <!-- Кнопка -->
-                    <a href="#" class="block mt-6">
-                        <div class="group/button relative px-6 py-3 bg-gradient-to-r from-indigo-600 
-                                  to-purple-600 rounded-xl text-white text-center overflow-hidden">
-                            <span class="absolute w-0 h-0 transition-all duration-500 ease-out 
-                                       bg-white rounded-full group-hover/button:w-full 
-                                       group-hover/button:h-full opacity-10"></span>
-                            <span class="relative flex items-center justify-center">
-                                Подробнее
-                                <i class="fas fa-arrow-right ml-2 transform group-hover/button:translate-x-1 
-                                          transition-transform"></i>
-                            </span>
-                        </div>
-                    </a>
-                </div>
+              <!-- Цена -->
+              <div class="absolute bottom-4 left-4">
+                <div class="text-2xl font-bold text-white">₽120,000,000</div>
+                <div class="text-sm text-gray-300">₽500,000/м²</div>
+              </div>
             </div>
 
-            <!-- Карточка объекта 2 (аналогичная структура) -->
-            <!-- ... -->
+            <!-- Информация -->
+            <div class="p-6 space-y-4">
+              <h3
+                class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300"
+              >
+                Современная Вилла на Рублёвке
+              </h3>
 
-            <!-- Карточка объекта 3 (аналогичная структура) -->
-            <!-- ... -->
+              <div class="flex items-center text-gray-300">
+                <i class="fas fa-map-marker-alt text-indigo-400 mr-2"></i>
+                Рублёво-Успенское шоссе, 9 км
+              </div>
+
+              <!-- Характеристики -->
+              <div class="grid grid-cols-3 gap-4 py-4 border-t border-white/10">
+                <div class="text-center">
+                  <div class="text-gray-300 mb-1">
+                    <i class="fas fa-bed text-indigo-400 mr-2"></i>5
+                  </div>
+                  <div class="text-xs text-gray-400">Спален</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-gray-300 mb-1">
+                    <i class="fas fa-bath text-indigo-400 mr-2"></i>4
+                  </div>
+                  <div class="text-xs text-gray-400">Ванных</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-gray-300 mb-1">
+                    <i class="fas fa-ruler-combined text-indigo-400 mr-2"></i
+                    >450
+                  </div>
+                  <div class="text-xs text-gray-400">м²</div>
+                </div>
+              </div>
+
+              <!-- Особенности -->
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-white/5 text-gray-300"
+                >
+                  Бассейн
+                </span>
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-white/5 text-gray-300"
+                >
+                  Спа
+                </span>
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-white/5 text-gray-300"
+                >
+                  Терраса
+                </span>
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-white/5 text-gray-300"
+                >
+                  Гараж
+                </span>
+              </div>
+
+              <!-- Кнопка -->
+              <a href="#" class="block mt-6">
+                <div
+                  class="group/button relative px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl text-white text-center overflow-hidden"
+                >
+                  <span
+                    class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover/button:w-full group-hover/button:h-full opacity-10"
+                  ></span>
+                  <span class="relative flex items-center justify-center">
+                    Подробнее
+                    <i
+                      class="fas fa-arrow-right ml-2 transform group-hover/button:translate-x-1 transition-transform"
+                    ></i>
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Карточка объекта 2 (аналогичная структура) -->
+          <!-- ... -->
+
+          <!-- Карточка объекта 3 (аналогичная структура) -->
+          <!-- ... -->
         </div>
 
         <!-- Кнопка "Показать больше" -->
         <div class="text-center mt-12" data-aos="fade-up">
-            <button class="group relative inline-flex items-center px-8 py-4 bg-white/5 
-                         backdrop-blur-xl text-white rounded-full overflow-hidden 
-                         hover:bg-white/10 transition-all duration-300">
-                <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white 
-                           rounded-full group-hover:w-full group-hover:h-full opacity-10"></span>
-                <span class="relative flex items-center">
-                    Показать больше объектов
-                    <svg class="ml-2 w-6 h-6 transform group-hover:translate-x-1 transition-transform" 
-                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                              d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </span>
-            </button>
+          <button
+            class="group relative inline-flex items-center px-8 py-4 bg-white/5 backdrop-blur-xl text-white rounded-full overflow-hidden hover:bg-white/10 transition-all duration-300"
+          >
+            <span
+              class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-full group-hover:h-full opacity-10"
+            ></span>
+            <span class="relative flex items-center">
+              Показать больше объектов
+              <svg
+                class="ml-2 w-6 h-6 transform group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </span>
+          </button>
         </div>
-    </div>
-</section>
-  
-<!-- Services Section -->
-<section id="services" class="relative py-32 bg-gradient-to-b from-gray-900 via-indigo-900/50 to-gray-900">
-    <!-- Декоративные элементы -->
-    <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-5"></div>
-        <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
-        <div class="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
-    </div>
+      </div>
+    </section>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Services Section -->
+    <section
+      id="services"
+      class="relative py-32 bg-gradient-to-b from-gray-900 via-indigo-900/50 to-gray-900"
+    >
+      <!-- Декоративные элементы -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-5"
+        ></div>
+        <div
+          class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"
+        ></div>
+        <div
+          class="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"
+        ></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Заголовок секции -->
         <div class="text-center mb-20" data-aos="fade-up">
-            <div class="inline-flex items-center space-x-2 mb-4">
-                <span class="h-px w-8 bg-indigo-500"></span>
-                <span class="text-indigo-400 uppercase text-sm tracking-wider font-medium">Наши услуги</span>
-                <span class="h-px w-8 bg-indigo-500"></span>
-            </div>
-            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Премиальный сервис для
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-                    требовательных клиентов
-                </span>
-            </h2>
-            <p class="text-gray-300 text-lg max-w-2xl mx-auto">
-                Мы предоставляем полный спектр услуг в сфере элитной недвижимости
-            </p>
+          <div class="inline-flex items-center space-x-2 mb-4">
+            <span class="h-px w-8 bg-indigo-500"></span>
+            <span
+              class="text-indigo-400 uppercase text-sm tracking-wider font-medium"
+              >Наши услуги</span
+            >
+            <span class="h-px w-8 bg-indigo-500"></span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Премиальный сервис для
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+            >
+              требовательных клиентов
+            </span>
+          </h2>
+          <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+            Мы предоставляем полный спектр услуг в сфере элитной недвижимости
+          </p>
         </div>
 
         <!-- Сетка услуг -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Услуга 1 -->
-            <div class="group relative bg-white/5 backdrop-blur-xl rounded-3xl p-8 
-                        transition-all duration-500 hover:bg-white/10 hover:transform hover:scale-105"
-                 data-aos="fade-up"
-                 data-aos-delay="100">
-                <!-- Иконка -->
-                <div class="relative w-16 h-16 mb-8">
-                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 
-                              rounded-2xl transform rotate-6 group-hover:rotate-12 transition-transform duration-300"></div>
-                    <div class="relative w-full h-full bg-gray-900 rounded-2xl flex items-center justify-center">
-                        <i class="fas fa-home text-2xl text-transparent bg-clip-text 
-                                bg-gradient-to-r from-indigo-400 to-purple-400"></i>
-                    </div>
-                </div>
-
-                <!-- Контент -->
-                <h3 class="text-xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors">
-                    Продажа недвижимости
-                </h3>
-                <p class="text-gray-400 mb-6">
-                    Профессиональное сопровождение сделок купли-продажи элитной недвижимости
-                </p>
-
-                <!-- Преимущества -->
-                <ul class="space-y-3 mb-8">
-                    <li class="flex items-center text-gray-300">
-                        <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                        Оценка рыночной стоимости
-                    </li>
-                    <li class="flex items-center text-gray-300">
-                        <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                        Профессиональная фотосъемка
-                    </li>
-                    <li class="flex items-center text-gray-300">
-                        <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                        Юридическая проверка
-                    </li>
-                </ul>
-
-                <!-- Кнопка -->
-                <a href="#contact" class="group/button relative inline-flex items-center text-white">
-                    <span class="relative after:absolute after:bottom-0 after:left-0 after:w-full 
-                               after:h-px after:bg-indigo-500 after:transform after:scale-x-0 
-                               after:transition-transform after:duration-300 
-                               group-hover/button:after:scale-x-100">
-                        Подробнее
-                    </span>
-                    <svg class="ml-2 w-5 h-5 transform group-hover/button:translate-x-1 transition-transform" 
-                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                              d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
+          <!-- Услуга 1 -->
+          <div
+            class="group relative bg-white/5 backdrop-blur-xl rounded-3xl p-8 transition-all duration-500 hover:bg-white/10 hover:transform hover:scale-105"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <!-- Иконка -->
+            <div class="relative w-16 h-16 mb-8">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl transform rotate-6 group-hover:rotate-12 transition-transform duration-300"
+              ></div>
+              <div
+                class="relative w-full h-full bg-gray-900 rounded-2xl flex items-center justify-center"
+              >
+                <i
+                  class="fas fa-home text-2xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+                ></i>
+              </div>
             </div>
 
-            <!-- Услуга 2 -->
-            <div class="group relative bg-white/5 backdrop-blur-xl rounded-3xl p-8 
-                        transition-all duration-500 hover:bg-white/10 hover:transform hover:scale-105"
-                 data-aos="fade-up"
-                 data-aos-delay="200">
-                <div class="relative w-16 h-16 mb-8">
-                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 
-                              rounded-2xl transform rotate-6 group-hover:rotate-12 transition-transform duration-300"></div>
-                    <div class="relative w-full h-full bg-gray-900 rounded-2xl flex items-center justify-center">
-                        <i class="fas fa-key text-2xl text-transparent bg-clip-text 
-                                bg-gradient-to-r from-indigo-400 to-purple-400"></i>
-                    </div>
-                </div>
+            <!-- Контент -->
+            <h3
+              class="text-xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors"
+            >
+              Продажа недвижимости
+            </h3>
+            <p class="text-gray-400 mb-6">
+              Профессиональное сопровождение сделок купли-продажи элитной
+              недвижимости
+            </p>
 
-                <h3 class="text-xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors">
-                    Подбор недвижимости
-                </h3>
-                <p class="text-gray-400 mb-6">
-                    Индивидуальный поиск объектов недвижимости по вашим критериям
-                </p>
+            <!-- Преимущества -->
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center text-gray-300">
+                <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                Оценка рыночной стоимости
+              </li>
+              <li class="flex items-center text-gray-300">
+                <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                Профессиональная фотосъемка
+              </li>
+              <li class="flex items-center text-gray-300">
+                <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                Юридическая проверка
+              </li>
+            </ul>
 
-                <ul class="space-y-3 mb-8">
-                    <li class="flex items-center text-gray-300">
-                        <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                        Персональный менеджер
-                    </li>
-                    <li class="flex items-center text-gray-300">
-                        <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                        Закрытая база объектов
-                    </li>
-                    <li class="flex items-center text-gray-300">
-                        <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                        VIP-просмотры
-                    </li>
-                </ul>
+            <!-- Кнопка -->
+            <a
+              href="#contact"
+              class="group/button relative inline-flex items-center text-white"
+            >
+              <span
+                class="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-indigo-500 after:transform after:scale-x-0 after:transition-transform after:duration-300 group-hover/button:after:scale-x-100"
+              >
+                Подробнее
+              </span>
+              <svg
+                class="ml-2 w-5 h-5 transform group-hover/button:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
 
-                <a href="#contact" class="group/button relative inline-flex items-center text-white">
-                    <span class="relative after:absolute after:bottom-0 after:left-0 after:w-full 
-                               after:h-px after:bg-indigo-500 after:transform after:scale-x-0 
-                               after:transition-transform after:duration-300 
-                               group-hover/button:after:scale-x-100">
-                        Подробнее
-                    </span>
-                    <svg class="ml-2 w-5 h-5 transform group-hover/button:translate-x-1 transition-transform" 
-                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                              d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
+          <!-- Услуга 2 -->
+          <div
+            class="group relative bg-white/5 backdrop-blur-xl rounded-3xl p-8 transition-all duration-500 hover:bg-white/10 hover:transform hover:scale-105"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="relative w-16 h-16 mb-8">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl transform rotate-6 group-hover:rotate-12 transition-transform duration-300"
+              ></div>
+              <div
+                class="relative w-full h-full bg-gray-900 rounded-2xl flex items-center justify-center"
+              >
+                <i
+                  class="fas fa-key text-2xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+                ></i>
+              </div>
             </div>
 
-            <!-- Услуга 3 -->
-            <div class="group relative bg-white/5 backdrop-blur-xl rounded-3xl p-8 
-                        transition-all duration-500 hover:bg-white/10 hover:transform hover:scale-105"
-                 data-aos="fade-up"
-                 data-aos-delay="300">
-                <div class="relative w-16 h-16 mb-8">
-                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 
-                              rounded-2xl transform rotate-6 group-hover:rotate-12 transition-transform duration-300"></div>
-                    <div class="relative w-full h-full bg-gray-900 rounded-2xl flex items-center justify-center">
-                        <i class="fas fa-chart-line text-2xl text-transparent bg-clip-text 
-                                bg-gradient-to-r from-indigo-400 to-purple-400"></i>
-                    </div>
-                </div>
+            <h3
+              class="text-xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors"
+            >
+              Подбор недвижимости
+            </h3>
+            <p class="text-gray-400 mb-6">
+              Индивидуальный поиск объектов недвижимости по вашим критериям
+            </p>
 
-                <h3 class="text-xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors">
-                    Инвестиции
-                </h3>
-                <p class="text-gray-400 mb-6">
-                    Профессиональные консультации по инвестициям в недвижимость
-                </p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center text-gray-300">
+                <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                Персональный менеджер
+              </li>
+              <li class="flex items-center text-gray-300">
+                <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                Закрытая база объектов
+              </li>
+              <li class="flex items-center text-gray-300">
+                <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                VIP-просмотры
+              </li>
+            </ul>
 
-                <ul class="space-y-3 mb-8">
-                    <li class="flex items-center text-gray-300">
-                        <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                        Анализ рынка
-                    </li>
-                    <li class="flex items-center text-gray-300">
-                        <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                        Расчет доходности
-                    </li>
-                    <li class="flex items-center text-gray-300">
-                        <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                        Управление портфелем
-                    </li>
-                </ul>
+            <a
+              href="#contact"
+              class="group/button relative inline-flex items-center text-white"
+            >
+              <span
+                class="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-indigo-500 after:transform after:scale-x-0 after:transition-transform after:duration-300 group-hover/button:after:scale-x-100"
+              >
+                Подробнее
+              </span>
+              <svg
+                class="ml-2 w-5 h-5 transform group-hover/button:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
 
-                <a href="#contact" class="group/button relative inline-flex items-center text-white">
-                    <span class="relative after:absolute after:bottom-0 after:left-0 after:w-full 
-                               after:h-px after:bg-indigo-500 after:transform after:scale-x-0 
-                               after:transition-transform after:duration-300 
-                               group-hover/button:after:scale-x-100">
-                        Подробнее
-                    </span>
-                    <svg class="ml-2 w-5 h-5 transform group-hover/button:translate-x-1 transition-transform" 
-                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                              d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
+          <!-- Услуга 3 -->
+          <div
+            class="group relative bg-white/5 backdrop-blur-xl rounded-3xl p-8 transition-all duration-500 hover:bg-white/10 hover:transform hover:scale-105"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="relative w-16 h-16 mb-8">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl transform rotate-6 group-hover:rotate-12 transition-transform duration-300"
+              ></div>
+              <div
+                class="relative w-full h-full bg-gray-900 rounded-2xl flex items-center justify-center"
+              >
+                <i
+                  class="fas fa-chart-line text-2xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+                ></i>
+              </div>
             </div>
+
+            <h3
+              class="text-xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors"
+            >
+              Инвестиции
+            </h3>
+            <p class="text-gray-400 mb-6">
+              Профессиональные консультации по инвестициям в недвижимость
+            </p>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center text-gray-300">
+                <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                Анализ рынка
+              </li>
+              <li class="flex items-center text-gray-300">
+                <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                Расчет доходности
+              </li>
+              <li class="flex items-center text-gray-300">
+                <span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                Управление портфелем
+              </li>
+            </ul>
+
+            <a
+              href="#contact"
+              class="group/button relative inline-flex items-center text-white"
+            >
+              <span
+                class="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-indigo-500 after:transform after:scale-x-0 after:transition-transform after:duration-300 group-hover/button:after:scale-x-100"
+              >
+                Подробнее
+              </span>
+              <svg
+                class="ml-2 w-5 h-5 transform group-hover/button:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
         <!-- CTA секция -->
         <div class="mt-20 text-center" data-aos="fade-up">
-            <div class="inline-block p-1 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600">
-                <a href="#contact" 
-                   class="group relative inline-flex items-center px-8 py-4 bg-gray-900 text-white 
-                          rounded-full overflow-hidden hover:bg-gray-800 transition-colors">
-                    <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white 
-                               rounded-full group-hover:w-full group-hover:h-full opacity-10"></span>
-                    <span class="relative flex items-center">
-                        Получить консультацию
-                        <svg class="ml-2 w-6 h-6 transform group-hover:translate-x-1 transition-transform" 
-                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                  d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </span>
-                </a>
-            </div>
+          <div
+            class="inline-block p-1 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600"
+          >
+            <a
+              href="#contact"
+              class="group relative inline-flex items-center px-8 py-4 bg-gray-900 text-white rounded-full overflow-hidden hover:bg-gray-800 transition-colors"
+            >
+              <span
+                class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-full group-hover:h-full opacity-10"
+              ></span>
+              <span class="relative flex items-center">
+                Получить консультацию
+                <svg
+                  class="ml-2 w-6 h-6 transform group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Agents Section -->
-<section id="agents" class="relative py-32 bg-gray-900">
-    <!-- Декоративные элементы -->
-    <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-5"></div>
-        <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
-    </div>
+    <!-- Agents Section -->
+    <section id="agents" class="relative py-32 bg-gray-900">
+      <!-- Декоративные элементы -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-5"
+        ></div>
+        <div
+          class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"
+        ></div>
+      </div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Заголовок секции -->
         <div class="text-center mb-20" data-aos="fade-up">
-            <div class="inline-flex items-center space-x-2 mb-4">
-                <span class="h-px w-8 bg-indigo-500"></span>
-                <span class="text-indigo-400 uppercase text-sm tracking-wider font-medium">Наша команда</span>
-                <span class="h-px w-8 bg-indigo-500"></span>
-            </div>
-            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Эксперты в сфере
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-                    элитной недвижимости
-                </span>
-            </h2>
-            <p class="text-gray-300 text-lg max-w-2xl mx-auto">
-                Профессионалы с многолетним опытом работы на рынке премиальной недвижимости
-            </p>
+          <div class="inline-flex items-center space-x-2 mb-4">
+            <span class="h-px w-8 bg-indigo-500"></span>
+            <span
+              class="text-indigo-400 uppercase text-sm tracking-wider font-medium"
+              >Наша команда</span
+            >
+            <span class="h-px w-8 bg-indigo-500"></span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Эксперты в сфере
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+            >
+              элитной недвижимости
+            </span>
+          </h2>
+          <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+            Профессионалы с многолетним опытом работы на рынке премиальной
+            недвижимости
+          </p>
         </div>
 
         <!-- Сетка агентов -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Агент 1 -->
-            <div class="group relative" data-aos="fade-up" data-aos-delay="100">
-                <!-- Карточка агента -->
-                <div class="relative bg-white/5 backdrop-blur-xl rounded-3xl overflow-hidden 
-                            transition-all duration-500 hover:bg-white/10">
-                    <!-- Фото -->
-                    <div class="relative h-96 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a" 
-                             class="w-full h-full object-cover transition-transform duration-500 
-                                    group-hover:scale-110" 
-                             alt="Agent Name">
-                        
-                        <!-- Градиентное наложение -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
-                        
-                        <!-- Социальные сети -->
-                        <div class="absolute bottom-0 left-0 right-0 p-6">
-                            <div class="flex justify-center space-x-4 translate-y-8 opacity-0 
-                                      group-hover:translate-y-0 group-hover:opacity-100 
-                                      transition-all duration-300">
-                                <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center 
-                                                 justify-center text-white hover:bg-indigo-600 
-                                                 transition-colors duration-300">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center 
-                                                 justify-center text-white hover:bg-indigo-600 
-                                                 transition-colors duration-300">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center 
-                                                 justify-center text-white hover:bg-indigo-600 
-                                                 transition-colors duration-300">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Агент 1 -->
+          <div class="group relative" data-aos="fade-up" data-aos-delay="100">
+            <!-- Карточка агента -->
+            <div
+              class="relative bg-white/5 backdrop-blur-xl rounded-3xl overflow-hidden transition-all duration-500 hover:bg-white/10"
+            >
+              <!-- Фото -->
+              <div class="relative h-96 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  alt="Agent Name"
+                />
 
-                    <!-- Информация -->
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-bold text-white mb-2">Александр Петров</h3>
-                        <p class="text-indigo-400 mb-4">Старший брокер</p>
-                        
-                        <!-- Статистика -->
-                        <div class="grid grid-cols-3 gap-4 mb-6">
-                            <div>
-                                <div class="text-2xl font-bold text-white">150+</div>
-                                <div class="text-sm text-gray-400">Сделок</div>
-                            </div>
-                            <div>
-                                <div class="text-2xl font-bold text-white">10</div>
-                                <div class="text-sm text-gray-400">Лет опыта</div>
-                            </div>
-                            <div>
-                                <div class="text-2xl font-bold text-white">98%</div>
-                                <div class="text-sm text-gray-400">Довольных клиентов</div>
-                            </div>
-                        </div>
+                <!-- Градиентное наложение -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"
+                ></div>
 
-                        <!-- Кнопка -->
-                        <a href="#contact" 
-                           class="group/button inline-flex items-center justify-center w-full px-6 py-3 
-                                  bg-gradient-to-r from-indigo-600 to-purple-600 text-white 
-                                  rounded-xl overflow-hidden transition-all duration-300 
-                                  hover:shadow-lg hover:shadow-indigo-500/25">
-                            <span class="absolute w-0 h-0 transition-all duration-500 ease-out 
-                                       bg-white rounded-full group-hover/button:w-full 
-                                       group-hover/button:h-full opacity-10"></span>
-                            <span class="relative flex items-center">
-                                Связаться
-                                <i class="fas fa-arrow-right ml-2 transform group-hover/button:translate-x-1 
-                                          transition-transform"></i>
-                            </span>
-                        </a>
-                    </div>
+                <!-- Социальные сети -->
+                <div class="absolute bottom-0 left-0 right-0 p-6">
+                  <div
+                    class="flex justify-center space-x-4 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+                  >
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-indigo-600 transition-colors duration-300"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-indigo-600 transition-colors duration-300"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-indigo-600 transition-colors duration-300"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </div>
                 </div>
-            </div>
+              </div>
 
-            <!-- Агент 2 -->
-            <div class="group relative" data-aos="fade-up" data-aos-delay="200">
-                <!-- Аналогичная структура как у Агента 1, но с другими данными -->
-            </div>
+              <!-- Информация -->
+              <div class="p-6 text-center">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Александр Петров
+                </h3>
+                <p class="text-indigo-400 mb-4">Старший брокер</p>
 
-            <!-- Агент 3 -->
-            <div class="group relative" data-aos="fade-up" data-aos-delay="300">
-                <!-- Аналогичная структура как у Агента 1, но с другими данными -->
+                <!-- Статистика -->
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                  <div>
+                    <div class="text-2xl font-bold text-white">150+</div>
+                    <div class="text-sm text-gray-400">Сделок</div>
+                  </div>
+                  <div>
+                    <div class="text-2xl font-bold text-white">10</div>
+                    <div class="text-sm text-gray-400">Лет опыта</div>
+                  </div>
+                  <div>
+                    <div class="text-2xl font-bold text-white">98%</div>
+                    <div class="text-sm text-gray-400">Довольных клиентов</div>
+                  </div>
+                </div>
+
+                <!-- Кнопка -->
+                <a
+                  href="#contact"
+                  class="group/button inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25"
+                >
+                  <span
+                    class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover/button:w-full group-hover/button:h-full opacity-10"
+                  ></span>
+                  <span class="relative flex items-center">
+                    Связаться
+                    <i
+                      class="fas fa-arrow-right ml-2 transform group-hover/button:translate-x-1 transition-transform"
+                    ></i>
+                  </span>
+                </a>
+              </div>
             </div>
+          </div>
+
+          <!-- Агент 2 -->
+          <div class="group relative" data-aos="fade-up" data-aos-delay="200">
+            <!-- Аналогичная структура как у Агента 1, но с другими данными -->
+          </div>
+
+          <!-- Агент 3 -->
+          <div class="group relative" data-aos="fade-up" data-aos-delay="300">
+            <!-- Аналогичная структура как у Агента 1, но с другими данными -->
+          </div>
         </div>
 
         <!-- CTA секция -->
         <div class="mt-20 text-center" data-aos="fade-up">
-            <div class="inline-block p-1 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600">
-                <a href="#contact" 
-                   class="group relative inline-flex items-center px-8 py-4 bg-gray-900 
-                          text-white rounded-full overflow-hidden hover:bg-gray-800 
-                          transition-colors">
-                    <span class="absolute w-0 h-0 transition-all duration-500 ease-out 
-                               bg-white rounded-full group-hover:w-full group-hover:h-full 
-                               opacity-10"></span>
-                    <span class="relative flex items-center">
-                        Присоединиться к команде
-                        <svg class="ml-2 w-6 h-6 transform group-hover:translate-x-1 transition-transform" 
-                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                  d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </span>
-                </a>
-            </div>
+          <div
+            class="inline-block p-1 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600"
+          >
+            <a
+              href="#contact"
+              class="group relative inline-flex items-center px-8 py-4 bg-gray-900 text-white rounded-full overflow-hidden hover:bg-gray-800 transition-colors"
+            >
+              <span
+                class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-full group-hover:h-full opacity-10"
+              ></span>
+              <span class="relative flex items-center">
+                Присоединиться к команде
+                <svg
+                  class="ml-2 w-6 h-6 transform group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="relative py-32 bg-gradient-to-b from-gray-900 via-indigo-900/20 to-gray-900">
-    <!-- Декоративные элементы -->
-    <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-5"></div>
-        <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
-    </div>
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="relative py-32 bg-gradient-to-b from-gray-900 via-indigo-900/20 to-gray-900"
+    >
+      <!-- Декоративные элементы -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-5"
+        ></div>
+        <div
+          class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"
+        ></div>
+      </div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Заголовок секции -->
         <div class="text-center mb-20" data-aos="fade-up">
-            <div class="inline-flex items-center space-x-2 mb-4">
-                <span class="h-px w-8 bg-indigo-500"></span>
-                <span class="text-indigo-400 uppercase text-sm tracking-wider font-medium">Свяжитесь с нами</span>
-                <span class="h-px w-8 bg-indigo-500"></span>
-            </div>
-            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Готовы обсудить ваш
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-                    будущий дом?
-                </span>
-            </h2>
-            <p class="text-gray-300 text-lg max-w-2xl mx-auto">
-                Оставьте заявку или позвоните нам. Мы всегда рады помочь в поиске идеальной недвижимости
-            </p>
+          <div class="inline-flex items-center space-x-2 mb-4">
+            <span class="h-px w-8 bg-indigo-500"></span>
+            <span
+              class="text-indigo-400 uppercase text-sm tracking-wider font-medium"
+              >Свяжитесь с нами</span
+            >
+            <span class="h-px w-8 bg-indigo-500"></span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Готовы обсудить ваш
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+            >
+              будущий дом?
+            </span>
+          </h2>
+          <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+            Оставьте заявку или позвоните нам. Мы всегда рады помочь в поиске
+            идеальной недвижимости
+          </p>
         </div>
 
         <!-- Основной контент -->
         <div class="grid lg:grid-cols-2 gap-16">
-            <!-- Левая колонка - Форма -->
-            <div class="relative" data-aos="fade-right">
-                <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10">
-                    <form class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <!-- Имя -->
-                            <div class="relative">
-                                <label class="text-sm text-gray-300 mb-2 block">Ваше имя</label>
-                                <input type="text" 
-                                       class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl 
-                                              text-white placeholder-gray-500 focus:outline-none 
-                                              focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 
-                                              transition-all duration-300"
-                                       placeholder="Иван Петров">
-                            </div>
+          <!-- Левая колонка - Форма -->
+          <div class="relative" data-aos="fade-right">
+            <div
+              class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10"
+            >
+              <form class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                  <!-- Имя -->
+                  <div class="relative">
+                    <label class="text-sm text-gray-300 mb-2 block"
+                      >Ваше имя</label
+                    >
+                    <input
+                      type="text"
+                      class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-300"
+                      placeholder="Иван Петров"
+                    />
+                  </div>
 
-                            <!-- Телефон -->
-                            <div class="relative">
-                                <label class="text-sm text-gray-300 mb-2 block">Телефон</label>
-                                <input type="tel" 
-                                       class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl 
-                                              text-white placeholder-gray-500 focus:outline-none 
-                                              focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 
-                                              transition-all duration-300"
-                                       placeholder="+7 (___) ___-__-__">
-                            </div>
-                        </div>
-
-                        <!-- Email -->
-                        <div class="relative">
-                            <label class="text-sm text-gray-300 mb-2 block">Email</label>
-                            <input type="email" 
-                                   class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl 
-                                          text-white placeholder-gray-500 focus:outline-none 
-                                          focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 
-                                          transition-all duration-300"
-                                   placeholder="example@email.com">
-                        </div>
-
-                        <!-- Бюджет -->
-                        <div class="relative">
-                            <label class="text-sm text-gray-300 mb-2 block">Бюджет</label>
-                            <select class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl 
-                                         text-white placeholder-gray-500 focus:outline-none 
-                                         focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 
-                                         transition-all duration-300 appearance-none">
-                                <option value="" disabled selected>Выберите диапазон</option>
-                                <option value="50">До 50 млн ₽</option>
-                                <option value="100">50-100 млн ₽</option>
-                                <option value="200">100-200 млн ₽</option>
-                                <option value="max">Более 200 млн ₽</option>
-                            </select>
-                            <div class="absolute right-4 top-[41px] pointer-events-none text-gray-400">
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                        </div>
-
-                        <!-- Сообщение -->
-                        <div class="relative">
-                            <label class="text-sm text-gray-300 mb-2 block">Сообщение</label>
-                            <textarea class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl 
-                                             text-white placeholder-gray-500 focus:outline-none 
-                                             focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 
-                                             transition-all duration-300 min-h-[120px] resize-none"
-                                      placeholder="Опишите, какую недвижимость вы ищете..."></textarea>
-                        </div>
-
-                        <!-- Кнопка отправки -->
-                        <button type="submit" 
-                                class="group relative w-full inline-flex items-center justify-center px-8 py-4 
-                                       bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl 
-                                       overflow-hidden transition-all duration-300 hover:shadow-lg 
-                                       hover:shadow-indigo-500/25 active:scale-[0.98]">
-                            <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white 
-                                       rounded-full group-hover:w-full group-hover:h-full opacity-10"></span>
-                            <span class="relative flex items-center">
-                                <span>Отправить заявку</span>
-                                <i class="fas fa-paper-plane ml-2 transform group-hover:translate-x-1 
-                                          transition-transform"></i>
-                            </span>
-                        </button>
-                    </form>
+                  <!-- Телефон -->
+                  <div class="relative">
+                    <label class="text-sm text-gray-300 mb-2 block"
+                      >Телефон</label
+                    >
+                    <input
+                      type="tel"
+                      class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-300"
+                      placeholder="+7 (___) ___-__-__"
+                    />
+                  </div>
                 </div>
+
+                <!-- Email -->
+                <div class="relative">
+                  <label class="text-sm text-gray-300 mb-2 block">Email</label>
+                  <input
+                    type="email"
+                    class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-300"
+                    placeholder="example@email.com"
+                  />
+                </div>
+
+                <!-- Бюджет -->
+                <div class="relative">
+                  <label class="text-sm text-gray-300 mb-2 block">Бюджет</label>
+                  <select
+                    class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-300 appearance-none"
+                  >
+                    <option value="" disabled selected>
+                      Выберите диапазон
+                    </option>
+                    <option value="50">До 50 млн ₽</option>
+                    <option value="100">50-100 млн ₽</option>
+                    <option value="200">100-200 млн ₽</option>
+                    <option value="max">Более 200 млн ₽</option>
+                  </select>
+                  <div
+                    class="absolute right-4 top-[41px] pointer-events-none text-gray-400"
+                  >
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                </div>
+
+                <!-- Сообщение -->
+                <div class="relative">
+                  <label class="text-sm text-gray-300 mb-2 block"
+                    >Сообщение</label
+                  >
+                  <textarea
+                    class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-300 min-h-[120px] resize-none"
+                    placeholder="Опишите, какую недвижимость вы ищете..."
+                  ></textarea>
+                </div>
+
+                <!-- Кнопка отправки -->
+                <button
+                  type="submit"
+                  class="group relative w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25 active:scale-[0.98]"
+                >
+                  <span
+                    class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-full group-hover:h-full opacity-10"
+                  ></span>
+                  <span class="relative flex items-center">
+                    <span>Отправить заявку</span>
+                    <i
+                      class="fas fa-paper-plane ml-2 transform group-hover:translate-x-1 transition-transform"
+                    ></i>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Правая колонка - Контакты -->
+          <div class="space-y-8" data-aos="fade-left">
+            <!-- Стилизованная карта -->
+            <div
+              class="relative h-[300px] rounded-3xl overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-white/10"
+            >
+              <div class="absolute inset-0 opacity-10">
+                <svg
+                  class="w-full h-full"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M0,0 L100,0 L100,100 L0,100 Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="0.5"
+                  ></path>
+                  <path
+                    d="M0,50 Q25,25 50,50 T100,50"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="0.5"
+                  ></path>
+                  <path
+                    d="M0,30 Q25,75 50,30 T100,30"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="0.5"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                class="relative h-full flex items-center justify-center text-center"
+              >
+                <div>
+                  <div
+                    class="w-16 h-16 bg-indigo-600/20 rounded-2xl flex items-center justify-center text-indigo-400 mx-auto mb-4"
+                  >
+                    <i class="fas fa-map-marker-alt text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-white mb-2">
+                    Главный офис
+                  </h3>
+                  <p class="text-gray-400 mb-4">Москва, Пресненская наб., 12</p>
+                  <a
+                    href="https://maps.google.com"
+                    target="_blank"
+                    class="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors"
+                  >
+                    <span>Построить маршрут</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
             </div>
 
-            <!-- Правая колонка - Контакты -->
-            <div class="space-y-8" data-aos="fade-left">
-                <!-- Стилизованная карта -->
-                <div class="relative h-[300px] rounded-3xl overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-white/10">
-                    <div class="absolute inset-0 opacity-10">
-                        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="currentColor" stroke-width="0.5"></path>
-                            <path d="M0,50 Q25,25 50,50 T100,50" fill="none" stroke="currentColor" stroke-width="0.5"></path>
-                            <path d="M0,30 Q25,75 50,30 T100,30" fill="none" stroke="currentColor" stroke-width="0.5"></path>
-                        </svg>
-                    </div>
-                    <div class="relative h-full flex items-center justify-center text-center">
-                        <div>
-                            <div class="w-16 h-16 bg-indigo-600/20 rounded-2xl flex items-center justify-center text-indigo-400 mx-auto mb-4">
-                                <i class="fas fa-map-marker-alt text-2xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Главный офис</h3>
-                            <p class="text-gray-400 mb-4">Москва, Пресненская наб., 12</p>
-                            <a href="https://maps.google.com" target="_blank" 
-                               class="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors">
-                                <span>Построить маршрут</span>
-                                <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
+            <!-- Контактные карточки -->
+            <div class="grid grid-cols-2 gap-4">
+              <!-- Телефон -->
+              <div
+                class="bg-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+              >
+                <div class="flex items-center space-x-4">
+                  <div
+                    class="w-12 h-12 bg-indigo-600/20 rounded-xl flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform"
+                  >
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-gray-400 text-sm mb-1">Телефон</h4>
+                    <a
+                      href="tel:+74951234567"
+                      class="text-white hover:text-indigo-400 transition-colors"
+                    >
+                      +7 (495) 123-45-67
+                    </a>
+                  </div>
                 </div>
+              </div>
 
-                <!-- Контактные карточки -->
-                <div class="grid grid-cols-2 gap-4">
-                    <!-- Телефон -->
-                    <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/10 
-                                hover:bg-white/10 transition-all duration-300 group">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-indigo-600/20 rounded-xl flex items-center justify-center 
-                                      text-indigo-400 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-gray-400 text-sm mb-1">Телефон</h4>
-                                <a href="tel:+74951234567" class="text-white hover:text-indigo-400 transition-colors">
-                                    +7 (495) 123-45-67
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/10 
-                                hover:bg-white/10 transition-all duration-300 group">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-indigo-600/20 rounded-xl flex items-center justify-center 
-                                      text-indigo-400 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-gray-400 text-sm mb-1">Email</h4>
-                                <a href="mailto:info@example.com" class="text-white hover:text-indigo-400 transition-colors">
-                                    info@example.com
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- WhatsApp -->
-                    <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/10 
-                                hover:bg-white/10 transition-all duration-300 group">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-indigo-600/20 rounded-xl flex items-center justify-center 
-                                      text-indigo-400 group-hover:scale-110 transition-transform">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-gray-400 text-sm mb-1">WhatsApp</h4>
-                                <a href="https://wa.me/74951234567" class="text-white hover:text-indigo-400 transition-colors">
-                                    +7 (495) 123-45-67
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Telegram -->
-                    <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/10 
-                                hover:bg-white/10 transition-all duration-300 group">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-indigo-600/20 rounded-xl flex items-center justify-center 
-                                      text-indigo-400 group-hover:scale-110 transition-transform">
-                                <i class="fab fa-telegram-plane"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-gray-400 text-sm mb-1">Telegram</h4>
-                                <a href="https://t.me/example" class="text-white hover:text-indigo-400 transition-colors">
-                                    @example
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+              <!-- Email -->
+              <div
+                class="bg-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+              >
+                <div class="flex items-center space-x-4">
+                  <div
+                    class="w-12 h-12 bg-indigo-600/20 rounded-xl flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform"
+                  >
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-gray-400 text-sm mb-1">Email</h4>
+                    <a
+                      href="mailto:info@example.com"
+                      class="text-white hover:text-indigo-400 transition-colors"
+                    >
+                      info@example.com
+                    </a>
+                  </div>
                 </div>
+              </div>
 
-                <!-- График работы -->
-                <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10">
-                    <div class="flex items-center justify-between mb-6">
-                        <h3 class="text-xl font-bold text-white">График работы</h3>
-                        <div class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-sm">
-                            Сейчас открыто
-                        </div>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="flex justify-between text-gray-400">
-                            <span>Понедельник - Пятница</span>
-                            <span>9:00 - 20:00</span>
-                        </div>
-                        <div class="flex justify-between text-gray-400">
-                            <span>Суббота</span>
-                            <span>10:00 - 18:00</span>
-                        </div>
-                        <div class="flex justify-between text-gray-400">
-                            <span>Воскресенье</span>
-                            <span>По записи</span>
-                        </div>
-                    </div>
+              <!-- WhatsApp -->
+              <div
+                class="bg-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+              >
+                <div class="flex items-center space-x-4">
+                  <div
+                    class="w-12 h-12 bg-indigo-600/20 rounded-xl flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform"
+                  >
+                    <i class="fab fa-whatsapp"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-gray-400 text-sm mb-1">WhatsApp</h4>
+                    <a
+                      href="https://wa.me/74951234567"
+                      class="text-white hover:text-indigo-400 transition-colors"
+                    >
+                      +7 (495) 123-45-67
+                    </a>
+                  </div>
                 </div>
+              </div>
+
+              <!-- Telegram -->
+              <div
+                class="bg-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+              >
+                <div class="flex items-center space-x-4">
+                  <div
+                    class="w-12 h-12 bg-indigo-600/20 rounded-xl flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform"
+                  >
+                    <i class="fab fa-telegram-plane"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-gray-400 text-sm mb-1">Telegram</h4>
+                    <a
+                      href="https://t.me/example"
+                      class="text-white hover:text-indigo-400 transition-colors"
+                    >
+                      @example
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <!-- График работы -->
+            <div
+              class="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10"
+            >
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold text-white">График работы</h3>
+                <div
+                  class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-sm"
+                >
+                  Сейчас открыто
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div class="flex justify-between text-gray-400">
+                  <span>Понедельник - Пятница</span>
+                  <span>9:00 - 20:00</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                  <span>Суббота</span>
+                  <span>10:00 - 18:00</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                  <span>Воскресенье</span>
+                  <span>По записи</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
- 
-<!-- Footer Section -->
-<footer class="relative bg-gray-900 pt-24 pb-12 overflow-hidden">
-    <!-- Декоративные элементы -->
-    <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-5"></div>
-        <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
-    </div>
+    <!-- Footer Section -->
+    <footer class="relative bg-gray-900 pt-24 pb-12 overflow-hidden">
+      <!-- Декоративные элементы -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-5"
+        ></div>
+        <div
+          class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"
+        ></div>
+      </div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Основной контент футера -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-            <!-- Колонка 1 - О компании -->
-            <div class="space-y-6">
-                <!-- Логотип -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl 
-                                flex items-center justify-center">
-                        <span class="text-white text-xl font-bold">L</span>
-                    </div>
-                    <span class="text-white text-xl font-bold">Luxury Estate</span>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <!-- Колонка 1 - О компании -->
+          <div class="space-y-6">
+            <!-- Логотип -->
+            <div class="flex items-center space-x-3">
+              <div
+                class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-bold">L</span>
+              </div>
+              <span class="text-white text-xl font-bold">Luxury Estate</span>
+            </div>
+
+            <p class="text-gray-400 text-sm">
+              Мы специализируемся на элитной недвижимости, предлагая нашим
+              клиентам исключительный сервис и доступ к самым престижным
+              объектам.
+            </p>
+
+            <!-- Социальные сети -->
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all duration-300 group"
+              >
+                <i
+                  class="fab fa-facebook-f transform group-hover:scale-110 transition-transform"
+                ></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all duration-300 group"
+              >
+                <i
+                  class="fab fa-instagram transform group-hover:scale-110 transition-transform"
+                ></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all duration-300 group"
+              >
+                <i
+                  class="fab fa-youtube transform group-hover:scale-110 transition-transform"
+                ></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all duration-300 group"
+              >
+                <i
+                  class="fab fa-telegram-plane transform group-hover:scale-110 transition-transform"
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Колонка 2 - Быстрые ссылки -->
+          <div>
+            <h3 class="text-white font-bold mb-6">Быстрые ссылки</h3>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-indigo-400 transition-colors flex items-center group"
+                >
+                  <i
+                    class="fas fa-chevron-right text-xs mr-2 transform group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  О компании
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-indigo-400 transition-colors flex items-center group"
+                >
+                  <i
+                    class="fas fa-chevron-right text-xs mr-2 transform group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Услуги
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#properties"
+                  class="text-gray-400 hover:text-indigo-400 transition-colors flex items-center group"
+                >
+                  <i
+                    class="fas fa-chevron-right text-xs mr-2 transform group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Объекты
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#agents"
+                  class="text-gray-400 hover:text-indigo-400 transition-colors flex items-center group"
+                >
+                  <i
+                    class="fas fa-chevron-right text-xs mr-2 transform group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Команда
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-indigo-400 transition-colors flex items-center group"
+                >
+                  <i
+                    class="fas fa-chevron-right text-xs mr-2 transform group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Колонка 3 - Контакты -->
+          <div>
+            <h3 class="text-white font-bold mb-6">Контакты</h3>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-indigo-400 transition-colors flex items-center group"
+                >
+                  <div
+                    class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center mr-3 group-hover:bg-indigo-600/20 transition-colors"
+                  >
+                    <i class="fas fa-map-marker-alt text-indigo-400"></i>
+                  </div>
+                  Москва, Пресненская наб., 12
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+74951234567"
+                  class="text-gray-400 hover:text-indigo-400 transition-colors flex items-center group"
+                >
+                  <div
+                    class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center mr-3 group-hover:bg-indigo-600/20 transition-colors"
+                  >
+                    <i class="fas fa-phone-alt text-indigo-400"></i>
+                  </div>
+                  +7 (495) 123-45-67
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:info@example.com"
+                  class="text-gray-400 hover:text-indigo-400 transition-colors flex items-center group"
+                >
+                  <div
+                    class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center mr-3 group-hover:bg-indigo-600/20 transition-colors"
+                  >
+                    <i class="fas fa-envelope text-indigo-400"></i>
+                  </div>
+                  info@example.com
+                </a>
+              </li>
+              <li>
+                <div class="text-gray-400 flex items-center">
+                  <div
+                    class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center mr-3"
+                  >
+                    <i class="fas fa-clock text-indigo-400"></i>
+                  </div>
+                  Пн-Вс: 9:00 - 20:00
                 </div>
-                
-                <p class="text-gray-400 text-sm">
-                    Мы специализируемся на элитной недвижимости, предлагая нашим клиентам исключительный сервис 
-                    и доступ к самым престижным объектам.
-                </p>
+              </li>
+            </ul>
+          </div>
 
-                <!-- Социальные сети -->
-                <div class="flex space-x-4">
-                    <a href="#" class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center 
-                                     text-gray-400 hover:bg-indigo-600 hover:text-white 
-                                     transition-all duration-300 group">
-                        <i class="fab fa-facebook-f transform group-hover:scale-110 transition-transform"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center 
-                                     text-gray-400 hover:bg-indigo-600 hover:text-white 
-                                     transition-all duration-300 group">
-                        <i class="fab fa-instagram transform group-hover:scale-110 transition-transform"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center 
-                                     text-gray-400 hover:bg-indigo-600 hover:text-white 
-                                     transition-all duration-300 group">
-                        <i class="fab fa-youtube transform group-hover:scale-110 transition-transform"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center 
-                                     text-gray-400 hover:bg-indigo-600 hover:text-white 
-                                     transition-all duration-300 group">
-                        <i class="fab fa-telegram-plane transform group-hover:scale-110 transition-transform"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Колонка 2 - Быстрые ссылки -->
-            <div>
-                <h3 class="text-white font-bold mb-6">Быстрые ссылки</h3>
-                <ul class="space-y-4">
-                    <li>
-                        <a href="#about" class="text-gray-400 hover:text-indigo-400 transition-colors 
-                                              flex items-center group">
-                            <i class="fas fa-chevron-right text-xs mr-2 transform group-hover:translate-x-1 
-                                      transition-transform"></i>
-                            О компании
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#services" class="text-gray-400 hover:text-indigo-400 transition-colors 
-                                                 flex items-center group">
-                            <i class="fas fa-chevron-right text-xs mr-2 transform group-hover:translate-x-1 
-                                      transition-transform"></i>
-                            Услуги
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#properties" class="text-gray-400 hover:text-indigo-400 transition-colors 
-                                                   flex items-center group">
-                            <i class="fas fa-chevron-right text-xs mr-2 transform group-hover:translate-x-1 
-                                      transition-transform"></i>
-                            Объекты
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#agents" class="text-gray-400 hover:text-indigo-400 transition-colors 
-                                                flex items-center group">
-                            <i class="fas fa-chevron-right text-xs mr-2 transform group-hover:translate-x-1 
-                                      transition-transform"></i>
-                            Команда
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="text-gray-400 hover:text-indigo-400 transition-colors 
-                                                flex items-center group">
-                            <i class="fas fa-chevron-right text-xs mr-2 transform group-hover:translate-x-1 
-                                      transition-transform"></i>
-                            Контакты
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Колонка 3 - Контакты -->
-            <div>
-                <h3 class="text-white font-bold mb-6">Контакты</h3>
-                <ul class="space-y-4">
-                    <li>
-                        <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors 
-                                         flex items-center group">
-                            <div class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center 
-                                      mr-3 group-hover:bg-indigo-600/20 transition-colors">
-                                <i class="fas fa-map-marker-alt text-indigo-400"></i>
-                            </div>
-                            Москва, Пресненская наб., 12
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:+74951234567" class="text-gray-400 hover:text-indigo-400 transition-colors 
-                                                        flex items-center group">
-                            <div class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center 
-                                      mr-3 group-hover:bg-indigo-600/20 transition-colors">
-                                <i class="fas fa-phone-alt text-indigo-400"></i>
-                            </div>
-                            +7 (495) 123-45-67
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:info@example.com" class="text-gray-400 hover:text-indigo-400 
-                                                               transition-colors flex items-center group">
-                            <div class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center 
-                                      mr-3 group-hover:bg-indigo-600/20 transition-colors">
-                                <i class="fas fa-envelope text-indigo-400"></i>
-                            </div>
-                            info@example.com
-                        </a>
-                    </li>
-                    <li>
-                        <div class="text-gray-400 flex items-center">
-                            <div class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center mr-3">
-                                <i class="fas fa-clock text-indigo-400"></i>
-                            </div>
-                            Пн-Вс: 9:00 - 20:00
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Колонка 4 - Подписка -->
-            <div>
-                <h3 class="text-white font-bold mb-6">Подписка на новости</h3>
-                <p class="text-gray-400 text-sm mb-4">
-                    Подпишитесь на нашу рассылку, чтобы первыми узнавать о новых объектах и специальных предложениях
-                </p>
-                <form class="space-y-3">
-                    <div class="relative">
-                        <input type="email" 
-                               placeholder="Ваш email" 
-                               class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl 
-                                      text-white placeholder-gray-500 focus:outline-none 
-                                      focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 
-                                      transition-all duration-300">
-                    </div>
-                    <button type="submit" 
-                            class="group relative w-full inline-flex items-center justify-center px-4 py-3 
-                                   bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl 
-                                   overflow-hidden transition-all duration-300 hover:shadow-lg 
-                                   hover:shadow-indigo-500/25">
-                        <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white 
-                                   rounded-full group-hover:w-full group-hover:h-full opacity-10"></span>
-                        <span class="relative flex items-center">
-                            <span>Подписаться</span>
-                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 
-                                      transition-transform"></i>
-                        </span>
-                    </button>
-                </form>
-            </div>
+          <!-- Колонка 4 - Подписка -->
+          <div>
+            <h3 class="text-white font-bold mb-6">Подписка на новости</h3>
+            <p class="text-gray-400 text-sm mb-4">
+              Подпишитесь на нашу рассылку, чтобы первыми узнавать о новых
+              объектах и специальных предложениях
+            </p>
+            <form class="space-y-3">
+              <div class="relative">
+                <input
+                  type="email"
+                  placeholder="Ваш email"
+                  class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-300"
+                />
+              </div>
+              <button
+                type="submit"
+                class="group relative w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25"
+              >
+                <span
+                  class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-full group-hover:h-full opacity-10"
+                ></span>
+                <span class="relative flex items-center">
+                  <span>Подписаться</span>
+                  <i
+                    class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"
+                  ></i>
+                </span>
+              </button>
+            </form>
+          </div>
         </div>
 
         <!-- Нижняя часть футера -->
         <div class="pt-8 border-t border-white/10">
-            <div class="grid md:grid-cols-2 gap-4 items-center">
-                <!-- Копирайт -->
-                <div class="text-gray-400 text-sm">
-                    © 2024 Luxury Estate. Все права защищены.
-                </div>
-                
-                <!-- Правовые ссылки -->
-                <div class="flex space-x-4 md:justify-end text-sm">
-                    <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors">
-                        Политика конфиденциальности
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors">
-                        Условия использования
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors">
-                        Карта сайта
-                    </a>
-                </div>
+          <div class="grid md:grid-cols-2 gap-4 items-center">
+            <!-- Копирайт -->
+            <div class="text-gray-400 text-sm">
+              © 2024 Luxury Estate. Все права защищены.
             </div>
-        </div>
-    </div>
 
-    <!-- Кнопка "Наверх" -->
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-indigo-600 to-purple-600 
-                   rounded-xl flex items-center justify-center text-white shadow-lg 
-                   hover:shadow-indigo-500/25 transition-all duration-300 group">
-        <i class="fas fa-arrow-up transform group-hover:-translate-y-1 transition-transform"></i>
-    </button>
-</footer>
+            <!-- Правовые ссылки -->
+            <div class="flex space-x-4 md:justify-end text-sm">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-indigo-400 transition-colors"
+              >
+                Политика конфиденциальности
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-indigo-400 transition-colors"
+              >
+                Условия использования
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-indigo-400 transition-colors"
+              >
+                Карта сайта
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Кнопка "Наверх" -->
+      <button
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center text-white shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 group"
+      >
+        <i
+          class="fas fa-arrow-up transform group-hover:-translate-y-1 transition-transform"
+        ></i>
+      </button>
+    </footer>
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            offset: 100,
-            once: true
-        });
+      AOS.init({
+        duration: 800,
+        offset: 100,
+        once: true,
+      });
     </script>
-</body>
+  </body>
 </html>
